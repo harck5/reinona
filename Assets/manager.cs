@@ -5,7 +5,7 @@ using UnityEngine;
 public class manager : MonoBehaviour
 {
     public GameObject objetoPrefab; // Es el objeto que intanciaremos
-    private GameObject instantiatedObject; // y este sera el objeto que igualaremos para poder hacer que se mueva por el tablero
+    public GameObject instantiatedObject; // y este sera el objeto que igualaremos para poder hacer que se mueva por el tablero
     private int posX = 8; //limites para el tablero
     private int posY = 8;
     
@@ -26,7 +26,7 @@ public class manager : MonoBehaviour
     }
     private void Update()
     {
-        MoveQueen();
+        MoveQueen2();
     }
     private void MoveQueen()
     {
@@ -69,6 +69,14 @@ public class manager : MonoBehaviour
                     Debug.Log("Aprende a jugar al ajedrez"); //el resto de casillas
                 }
             }
+        }
+    }
+    private void MoveQueen2()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log(message: "algo");
+            
         }
     }
 }
